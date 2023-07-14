@@ -1,0 +1,33 @@
+Campaign
+-
+cf_id INT PK 
+contact_id INT FK >- Contacts.contact_id
+company_name VARCHAR(100)
+description TEXT 
+goal numeric 
+pledged numeric
+outcome VARCHAR(50)
+backers_count INT
+country VARCHAR(10)
+currency VARCHAR(10)
+launched_date date
+end_date date
+category_id VARCHAR(10) FK >- Category.category_id
+subcategory_id VARCHAR(10) FK >- Subcategory.subcategory_id
+
+Contacts
+-
+contact_id INT PK
+email VARCHAR(100)
+firstname VARCHAR(50)
+lastname VARCHAR(50)
+
+Category
+-
+category_id VARCHAR(10) PK
+category VARCHAR(50)
+
+Subcategory
+-
+subcategory_id VARCHAR(10) PK
+subcategory_name VARCHAR(50)
